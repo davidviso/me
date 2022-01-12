@@ -9,4 +9,21 @@ $theme-colors: (
   'dark': #001738,
 );
 
+
+body{
+  --text: #171C21;
+  --bg: #5C7985;
+  --bg2: #3a5157 ;
+  --layer1: #846870;
+  --layer2: #5e4a50;
+}
+
+.link{
+  color: 'secondary';
+}
+.title{
+  color: red;
+}
+
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
+
