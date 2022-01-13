@@ -1,42 +1,71 @@
-.container {
-  padding: 0 2rem;
-}
-
 .main {
-  padding: 4rem 0;
+  // padding: 4rem ;
   display: flex;
   height: 100%;
-  background: radial-gradient(at 0 100%, var(--bg) 20%, var(--bg2));
-  // background-image: url("../public/assets/cactus.jpg");
-  // background-size: cover;
+  background: radial-gradient(at 0 100%, var(--bg) 40%, var(--bg2));
+  // background-image: url("../public/assets/wall2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-position: 40%;
   color: var(--text);
  }
 
 
 .banner{
-  --scale: 1.1;
+
+  z-index: +1;
   background: var(--layer1);
-  background-image: url("../public/assets/waves.jpg");
+  background-image: url("../public/assets/cactus.jpg");
+  background-size:cover;
+  background-position: 49%;
   border-radius: 12px;
-  color: var(--bg2);
+  padding: 0;
+  color: var(--text);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity:  0;
+  visibility: hidden;
+  transition: 0.2s;
+  position: fixed;
+  width: auto;
+  left: 30px;
+  top: 80px;
+  &.show{
+    opacity: 1;
+    visibility: visible;
+  }
   .menu{
     text-align: center;
+    width:100%;
+    
     .link{
       cursor: pointer;
-      margin: 20px;
+      margin: 40px 0;
+      padding: 4px 12px;
       font-size: 18px;
+      width: 100%;
+      transition: 0.2s;
+       &:hover{
+background: var(--bg2);
+       }
     }
   };
 }
 
 
 .title{
-  margin-bottom: 40px;
+  margin: 40px -12px;
+  padding: 20px;
   display: flex;
+  justify-content: center;
+  color: var(--green);
+  background: var(--dark);
+width: 100vw;
   .profile{
+    display: flex;
+    justify-content: center;
     margin-right:6px;
     background-image: url("../public/assets/profile.jpg");
     background-size: cover;
@@ -46,6 +75,19 @@
     transform: scaleX(-1);
   }
 }
+
+
+.section{
+  padding: 4px 20px;
+  border-radius: 3px;
+  background: var(--blue);
+  color: var(--bg);
+  margin: 40px 0 10px 0; 
+  h1{
+    margin: 8px;
+  }
+}
+
 .grid {
   display: flex;
   align-items: center;

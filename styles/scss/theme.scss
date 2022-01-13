@@ -9,21 +9,54 @@ $theme-colors: (
   'dark': #001738,
 );
 
+// ocean
+// body{
+//   --text: #171C21;
+//   --bg: #5C7985;
+//   --bg2: #3a5157 ;
+//   --layer1: #846870;
+//   --layer2: #5e4a50;
+// }
 
+// cactus
+// body{
+//   --text: #131B07 ;
+//   --bg: #A4B3BD;
+//   --bg2: #8c9ca7;
+//   --layer1: #534434;
+//   --layer2: #62682B;
+  
+// }
+
+//nord
 body{
-  --text: #171C21;
-  --bg: #5C7985;
-  --bg2: #3a5157 ;
-  --layer1: #846870;
-  --layer2: #5e4a50;
-}
+  --text: #2E3440;
+  --dark: #4C566A;
+  --dark2: #434C5E;
+  --dark3: #3B4252;
 
-.link{
-  color: 'secondary';
+  --bg: #ECEFF4;
+  --bg2: #E5E9F0;
+  --bg3: #D8DEE9;
+  
+  --red: #BF616A;
+  --orange: #D08770;
+  --yellow: #EBCB8B;
+  --green: #A3BE8C;
+  --blue: #5E81AC;
+  --purple: #B48EAD;
+
 }
-.title{
-  color: red;
-}
+// wall
+// body{
+//   --text: #111111;
+//   --bg: #C8C3BE;
+//   --bg2: #C8C3BE;
+//   --layer1: #756D50;
+//   --layer2: #69564D;
+  
+// }
+
 
 @import '/node_modules/bootstrap/scss/bootstrap.scss';
 
