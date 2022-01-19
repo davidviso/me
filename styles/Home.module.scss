@@ -4,6 +4,7 @@
 .body {
   background: radial-gradient(at 0 100%, var(--bg) 40%, var(--bg2));
   height: 100%;
+overflow: hidden;
 }
 .main {
 
@@ -65,6 +66,7 @@
 .nav{
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
   height: 100%;
 .link{
   padding: 0px 2px;
@@ -74,7 +76,7 @@ margin: 0;
   cursor: pointer;
   transition: 0.2s;
   &:hover{
-    color: var(--green);
+    color: var(--bg3);
   }
 } 
 }
@@ -82,29 +84,31 @@ margin: 0;
 .link{
   margin-right: 12px;
   text-decoration: none;
-  color: var(--blue); 
+  color: var(--text); 
   transition: 0.2s;
   &:hover{
-    color: var(--green);
+    color: var(--bg3);
   }
 }
 
 .title{
-
-  margin: 70px -1200px 40px;
-  padding: 20px 1200px;
+  position: fixed;
+  left: 0;
+  right:  0;
+  height: 180px;
+  background: linear-gradient(-45deg, #8FBCBB, #88C0D0, #81A1C1, #5E81AC);
+	background-size: 400% 200%;
+	animation: gradient 15s ease infinite;  
+  padding: 40px 100px 20px;
   display: flex;
   justify-content: center;
-  // color: var(--bg2);
-  // background: var(--text);
-// width: 100vw;
-border-bottom: 2px solid var(--bg3);
+  transition: 0.4s;
 
-.name{
-  font-weight: bold;
-  font-family: "Inconsolata", sans-serif;
-}
-
+  .name{
+    font-weight: bold;
+    font-family: "Inconsolata", sans-serif;
+  }
+  
   .profile{
     display: flex;
     justify-content: center;
@@ -113,11 +117,23 @@ border-bottom: 2px solid var(--bg3);
     background-size: cover;
     width: 100px;
     height: 100px;
-    border-radius: 30px;
-    transform: scaleX(-1);
-   
+    border-radius: 10%;
+    transition: 0.3s;
   }
- 
+  &.scrolled{
+    height: 90px;
+    padding: 10px 100px;
+    
+    .profile{
+      width: 50px;
+      height: 50px;
+      
+    }
+    .details{
+      display: none;
+    }
+
+  } 
   
 }
 
@@ -141,4 +157,16 @@ border-bottom: 2px solid var(--bg3);
   padding: 40px 0;
   display: flex;
   justify-content: space-between;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
